@@ -36,6 +36,8 @@ document.addEventListener("click", ({ target }) => {
 
   if (action) {
     if (!isNaN(action)) {
+      if (!display.getAttribute("placeholder")) return
+
       if (
         !containsDecimalSeparator &&
         action === "0" &&
@@ -52,6 +54,13 @@ document.addEventListener("click", ({ target }) => {
       )
     } else {
       switch (action) {
+        case "off":
+          display.value = ""
+          display.removeAttribute("placeholder")
+          break
+        case "on-ce":
+          display.setAttribute("placeholder", 0)
+          break
         case ".":
           if (!containsDecimalSeparator)
             display.value += isEmpty ? `0${decimalSeparator}` : decimalSeparator

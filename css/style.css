@@ -42,6 +42,7 @@ body {
   text-align: right;
   font-family: "DS-Digital";
   font-size: 40px;
+  user-select: none;
 }
 .calc .calc__display::placeholder {
   color: inherit;
@@ -73,6 +74,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+.calc .calc__button > * {
+  pointer-events: none;
+}
 .calc .calc__button.calc__button:active {
   background: var(--bg-color);
   box-shadow: 0px 0px 2px 6px rgba(7, 11, 19, 0.6);
@@ -102,6 +106,9 @@ body {
 /* calc actions */
 .calc__button[data-action="on-ce"] {
   min-height: 49px;
+}
+.calc__button[data-action="on-ce"] span:first-child {
+  border-bottom: 1px solid #ffffff;
 }
 .calc__button[data-action="on-ce"],
 .calc__button[data-action="off"] {

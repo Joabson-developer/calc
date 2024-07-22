@@ -54,12 +54,12 @@ document.addEventListener("click", ({ target }) => {
       )
     } else {
       switch (action) {
+        case "on-ce":
+          display.setAttribute("placeholder", 0)
+          break
         case "off":
           display.value = ""
           display.removeAttribute("placeholder")
-          break
-        case "on-ce":
-          display.setAttribute("placeholder", 0)
           break
         case ".":
           if (!containsDecimalSeparator)

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <main class="calc">
+      <input
+        id="display"
+        type="tel"
+        class="calc__display"
+        placeholder="0"
+        readonly
+      />
+
+      <button
+        class="calc__button calc__button--green calc__button--rounded"
+        data-action="on-ce"
+      >
+        <span>ON</span>
+        <span>CE</span>
+      </button>
+      <div class="calc__wrapp-button">
+        <span>MRC</span>
+        <button
+          data-action="mrc"
+          class="calc__button calc__button--yellow calc__button--chips"
+        ></button>
+      </div>
+      <div class="calc__wrapp-button">
+        <span>M-</span>
+        <button
+          data-action="m-minus"
+          class="calc__button calc__button--yellow calc__button--chips"
+        ></button>
+      </div>
+      <div class="calc__wrapp-button">
+        <span>M+</span>
+        <button
+          data-action="m-plus"
+          class="calc__button calc__button--yellow calc__button--chips"
+        ></button>
+      </div>
+
+      <button class="calc__button" data-action="off">OFF</button>
+      <button class="calc__button" data-action="√">√</button>
+      <button class="calc__button" data-action="%">%</button>
+      <button class="calc__button" data-action="/">÷</button>
+
+      <button class="calc__button" data-action="7">7</button>
+      <button class="calc__button" data-action="8">8</button>
+      <button class="calc__button" data-action="9">9</button>
+      <button class="calc__button" data-action="*">X</button>
+
+      <button class="calc__button" data-action="4">4</button>
+      <button class="calc__button" data-action="5">5</button>
+      <button class="calc__button" data-action="6">6</button>
+      <button class="calc__button" data-action="-">-</button>
+
+      <button class="calc__button" data-action="1">1</button>
+      <button class="calc__button" data-action="2">2</button>
+      <button class="calc__button" data-action="3">3</button>
+      <button class="calc__button calc__button--green" data-action="+">
+        +
+      </button>
+
+      <button class="calc__button" data-action="0">0</button>
+      <button class="calc__button" data-action=".">•</button>
+      <button class="calc__button" data-action="=">=</button>
+    </main>
+  </body>
+</html>

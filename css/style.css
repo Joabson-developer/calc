@@ -44,6 +44,9 @@ body {
   font-size: 40px;
   user-select: none;
 }
+.calc .calc__display.calc__display--blink {
+  animation: blink 500ms;
+}
 .calc .calc__display::placeholder {
   color: inherit;
 }
@@ -126,4 +129,14 @@ body {
 .calc__button[data-action="-"],
 .calc__button[data-action="/"] {
   font-size: 26px;
+}
+
+/* animations */
+@keyframes blink {
+  0% {
+    color: #8ba77b;
+  }
+  100% {
+    color: initial;
+  }
 }
